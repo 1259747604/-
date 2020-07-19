@@ -1,13 +1,5 @@
-# test
+# 路由地址
 
-## Map
-
-```
-百度地图
-```
-
-## Lottie
-
-```
-动画
-```
+- / vant 吸顶
+- /map 百度地图
+- /lottie lottie 动画
