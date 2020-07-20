@@ -18,6 +18,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  overflow: auto;
+  overflow: hidden;
+  /* -webkit-overflow-scrolling: touch; */
 }
 </style>

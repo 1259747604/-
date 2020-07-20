@@ -21,6 +21,11 @@ const routes = [
     component: () => import('../views/Lottie.vue'),
   },
   {
+    path: '/video',
+    name: 'video',
+    component: () => import('../views/Video.vue'),
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
