@@ -26,6 +26,11 @@ const routes = [
     component: () => import('../views/Video.vue'),
   },
   {
+    path: '/exif',
+    name: 'exif',
+    component: () => import('../views/Exif.vue'),
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
