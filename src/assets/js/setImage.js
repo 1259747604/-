@@ -102,27 +102,29 @@ class ImgInfo {
 
     let url = await new Promise((reslove, reject) => {
       img.onload = function(params) {
-        // 如果是90度的旋转则宽高交换
+        // 如果是90度的旋转则宽高交换;
         // if (Orientation === 6 || Orientation === 8) {
-        //   canvas.width = height;
-        //   canvas.height = width;
+        //   img.width = height;
+        //   img.height = width;
         // } else {
-        //   canvas.width = width;
-        //   canvas.height = height;
+        //   img.width = width;
+        //   img.height = height;
         // }
         canvas.width = width;
         canvas.height = height;
         switch (Orientation) {
-          case 8: // 旋转90度
-            ctx.rotate(0.5 * Math.PI);
-            ctx.drawImage(this, 0, -height, width, height);
+          case 6: // 旋转90度
+            console.log(222);
+            ctx.translate(width / 2, height / 2);
+            ctx.rotate(-0.5 * Math.PI);
+            ctx.translate(0, 0);
+            ctx.drawImage(this, -height / 2, -width / 2, height, width);
             break;
           case 3: // 旋转180度
             ctx.rotate(Math.PI);
             ctx.drawImage(this, -width, -height, width, height);
             break;
-          case 6: // 旋转-90度
-            console.log(222);
+          case 8: // 旋转-90度
             ctx.rotate(-0.5 * Math.PI);
             ctx.drawImage(this, -width, 0, width, height);
             break;
